@@ -15,6 +15,17 @@ import { ProductsComponent } from './components/products/products.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { AddCatagoryComponent } from './components/admin-components/add-catagory/add-catagory.component';
+import { AddDepartmentComponent } from './components/admin-components/add-department/add-department.component';
+import { AddEmployerComponent } from './components/admin-components/add-employer/add-employer.component';
+import { AddProductComponent } from './components/admin-components/add-product/add-product.component';
+import { CreateAccountComponent } from './components/admin-components/create-account/create-account.component';
+import { DashboardComponent } from './components/admin-components/dashboard/dashboard.component';
+import { NavComponent } from './components/admin-components/nav/nav.component';
+import { ProfileComponent } from './components/admin-components/profile/profile.component';
+import { StuffComponent } from './components/admin-components/stuff/stuff.component';
+import { AdminFooterComponent } from './components/admin-components/admin-footer/admin-footer.component';
+import { AdminProductsComponent } from './components/admin-components/admin-products/admin-products.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +41,18 @@ import { OrdersComponent } from './components/orders/orders.component';
     ProductsComponent,
     ContactUsComponent,
     AboutUsComponent,
-    OrdersComponent
+    OrdersComponent,
+    AddCatagoryComponent,
+    AddDepartmentComponent,
+    AddEmployerComponent,
+    AddProductComponent,
+    CreateAccountComponent,
+    DashboardComponent,
+    NavComponent,
+    ProfileComponent,
+    StuffComponent,
+    AdminFooterComponent,
+    AdminProductsComponent
   ],
   imports: [
     BrowserModule,

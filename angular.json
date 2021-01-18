@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              
+              "src/assets/admin-css/templatemo-style.css"
             ],
             "scripts": []
           },
