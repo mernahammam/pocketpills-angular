@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:'add-catagory',component:AddCatagoryComponent},
   {path:'profile',component:ProfileComponent},
   {path:'dashboard',component:DashboardComponent }
-  {}
+  
 ];
 
 @NgModule({

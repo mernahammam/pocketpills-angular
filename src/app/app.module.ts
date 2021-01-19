@@ -26,7 +26,6 @@ import { ProfileComponent } from './components/admin-components/profile/profile.
 import { StuffComponent } from './components/admin-components/stuff/stuff.component';
 import { AdminFooterComponent } from './components/admin-components/admin-footer/admin-footer.component';
 import { AdminProductsComponent } from './components/admin-components/admin-products/admin-products.component';
-import { SingleProductComponent } from './components/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -53,8 +52,7 @@ import { SingleProductComponent } from './components/single-product/single-produ
     ProfileComponent,
     StuffComponent,
     AdminFooterComponent,
-    AdminProductsComponent,
-    SingleProductComponent
+    AdminProductsComponent
   ],
   imports: [
     BrowserModule,
