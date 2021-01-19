@@ -1,0 +1,7 @@
+.sidebar{
+    transform: translateX(-50px);
+}
+
+.widget-sidebar{
+    background-color:#26b5cc;
+}
