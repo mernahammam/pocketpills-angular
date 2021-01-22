@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -29,7 +30,8 @@ import { ProfileComponent } from './components/admin-components/profile/profile.
 import { StuffComponent } from './components/admin-components/stuff/stuff.component';
 import { AdminFooterComponent } from './components/admin-components/admin-footer/admin-footer.component';
 import { AdminProductsComponent } from './components/admin-components/admin-products/admin-products.component';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { CategoryPipe } from './category.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,12 +57,17 @@ import { AdminProductsComponent } from './components/admin-components/admin-prod
     ProfileComponent,
     StuffComponent,
     AdminFooterComponent,
-    AdminProductsComponent
+    AdminProductsComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
