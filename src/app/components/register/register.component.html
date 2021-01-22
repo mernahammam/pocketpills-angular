@@ -1,0 +1,170 @@
+<!-- start Sign In -->
+<div class="container">
+  <div class="main signp">
+    <!-- <p >Sign in</p> -->
+    <div class="loading sign" align="center">
+      <div>S</div>
+      <div>I</div>
+      <div>G</div>
+      <div>N</div>
+      <div></div>
+      <div>U</div>
+      <div>P</div>
+    </div>
+    <form class="form1" [formGroup]="registerReactiveForm" (ngSubmit)="onSubmit()">
+      <div class="form-group pb-3">
+        <input
+          class="un"
+          type="text"
+          name="userName"
+          formControlName="userName"
+          [(ngModel)]="form.userName"
+          align="center"
+          placeholder="Username"
+        />
+
+        <!-- Name Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.userName.touched && !registerFormControl.userName.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.userName.errors.required"
+            class="text-danger"
+          >
+            Name Required
+          </div>
+          <div
+            *ngIf="registerFormControl.userName.errors.minlength"
+            class="text-danger"
+          >
+            Min char is 3
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group pb-3">
+        <input class="un" type="email" formControlName="userEmail"
+        [(ngModel)]="form.userEmail"
+        align="center" placeholder="Useremail" />
+        <!-- Email Validation -->
+        <div
+          class="alert alert-danger col-8"
+          *ngIf="
+            registerFormControl.userEmail.touched &&
+            !registerFormControl.userEmail.valid
+          "
+        >
+          <div
+            *ngIf="registerFormControl.userEmail.errors.required"
+            class="text-danger"
+          >
+            Email Required
+          </div>
+          <div
+            *ngIf="registerFormControl.userEmail.errors.pattern"
+            class="text-danger"
+          >
+            Input Email in this formt x@x.xx
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group pb-3">
+
+      <input
+        class="pass"
+        type="password"
+        align="center"
+        [(ngModel)]="form.userPassword"
+        formControlName="userPassword"
+        placeholder="Password"
+      />
+
+              <!-- Password Validation -->
+              <div
+              class="alert alert-danger col-8"
+              *ngIf="
+                registerFormControl.userPassword.touched &&
+                !registerFormControl.userPassword.valid
+              "
+            >
+              <div
+                *ngIf="registerFormControl.userPassword.errors.required"
+                class="text-danger"
+              >
+                Password Required
+              </div>
+              <div
+                *ngIf="registerFormControl.userPassword.errors.pattern"
+                class="text-danger"
+              >
+              <ul>
+                <li>At Least 6 characters</li>
+                <li>Must contain at least 1 lower, 1 upper and 1 number - No special</li>
+                </ul>
+              </div>
+            </div>
+            </div>
+
+            <div class="form-group pb-3">
+
+      <input class="un" type="text" formControlName="userPhone" [(ngModel)]="form.userPhone"
+      align="center" placeholder="Userphone" />
+
+              <!-- Password Validation -->
+              <div
+              class="alert alert-danger col-8"
+              *ngIf="
+                registerFormControl.userPhone.touched &&
+                !registerFormControl.userPhone.valid
+              "
+            >
+              <div
+                *ngIf="registerFormControl.userPhone.errors.required"
+                class="text-danger"
+              >
+                Phone Required
+              </div>
+              <div
+                *ngIf="registerFormControl.userPhone.errors.pattern"
+                class="text-danger"
+              >
+                Enter valid phone number
+              </div>
+            </div>
+            </div>
+
+      <input class="un" type="text" align="center" name="userLocation" 
+      formControlName="userLocation"
+      [(ngModel)]="form.userLocation" placeholder="Location" />
+      <button class="btn btn-primary">Register</button>
+      <ul class="loginul ftco-footer-social list-unstyled">
+        <a href="#"></a>
+        <li class="ftco-animate fadeInUp ftco-animated">
+          <a href="https://www.twitter.com/" class="mr-3">
+            <i
+              class="fa fa-twitter text-theme-colored font-40 mt-5 mr-5 sm-display-block pull-left flip sm-pull-none"
+            ></i>
+          </a>
+          <a href="https://www.facebook.com/" class="mr-3">
+            <i
+              class="fa fa-facebook-official text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"
+            ></i>
+          </a>
+          <a href="https://www.Instagram.com/">
+            <i
+              class="fa fa-instagram text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"
+            ></i>
+          </a>
+        </li>
+      </ul>
+      <p class="signlink col-lg-12" align="center">
+        <a [routerLink]="['/login']">Sign In?</a>
+      </p>
+    </form>
+  </div>
+</div>

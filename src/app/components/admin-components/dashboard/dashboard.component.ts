@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,32 +7,10 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  orders: Object;
 
-  constructor(private http: HttpClient) { }
+  constructor(private authService: AuthServiceService) { }
 
-    async ngOnInit(): Promise<void> {
-      try {
-      
-     await this.http.get("https://pocket-pills.herokuapp.com/api/customer/orders").subscribe(res=>{
-       this.orders=res;
-     });
-
-   
-
-    } catch (error) {
-      
-    }
+  ngOnInit(): void {
+    this.authService.authUser();
   }
-
-  deleteInvoice(invNo) {
-    console.log(invNo);
-    
-    this.http
-    .delete('https://pocket-pills.herokuapp.com/api/customer/orders/' + invNo)
-    .subscribe((res) => {
-      // this.products = res;
-      });
-  }
-
 }

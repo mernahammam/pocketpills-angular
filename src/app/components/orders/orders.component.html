@@ -13,7 +13,7 @@
               <div class="title-icon">
                 <img class="mb-10" src="images/title-icon.png" alt="">
               </div>
-              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+              <p class=""></p>
             </div>
           </div>
         </div>
@@ -26,16 +26,16 @@
               <div class="profile-header">
                   <img src="https://i.imgur.com/X2oObC4.png" class="user-profile-header" alt="">
               </div>
-              <div class="profile-body">
+              <div class="profile-body" *ngFor="let user of userInfo">
                     <div class="author-img">
                         <img src="images/profile/person.png" class="user-profile-img" alt="">
                     </div>
-                    <div class="name">User Name</div>
+                    <div class="name">{{user['userName']}}</div>
                     <div class="intro">
-                          <div class="item-1 text">Orders</div>
-                          <div class="item-2 text">Change Password</div>
-                          <div class="item-3 text">Address Book</div>
-                          <div class="item-3 text">Account Settings</div>
+                          <div class="item-1 text">{{user['userPhone']}}</div>
+                          <div class="item-2 text">{{user['userlocation']}}</div>
+                          <div class="item-3 text">{{user['email']}}</div>
+                          <!-- <div class="item-3 text">Account Settings</div> -->
                     </div>
                       <ul class="styled-icons icon-theme-colored icon-dark icon-circled icon-sm">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -53,7 +53,9 @@
 
             
             <div class="col-sm-6 col-md-8">
-              <div class="row">
+
+
+              <div class="row" *ngFor="let order of userOrders">
                 <div id="mainContainer">
                   <div class="aside">
                     <div class="cardview">
@@ -64,11 +66,11 @@
                   </div>
                   <div id="card-content">
                     <div id="header">
-                      <h2>Order Name</h2>
+                      <h2>{{order['productName']}}</h2>
                     </div>
                     <div id="disc">
-                      <p>Order Number</p>
-                      <p>Order Date</p>
+                      <p>{{order['manufacturer']}}</p>
+                      <p>{{order['invDate']}}</p>
                       <button class="readmore_btn">Browse Category</button>
                       <button class="readmore_btn">Order Status</button>
       
@@ -77,77 +79,7 @@
                 </div>
               </div>
       
-                <div class="row">
-                <div id="mainContainer">
-                  <div class="aside">
-                    <div class="cardview">
-                      <div class="logo">
-                        <img class="order-image" src="images/products/axe.png" alt="profile-sample2" />
-                      </div>
-                    </div>
-                  </div>
-                  <div id="card-content">
-                    <div id="header">
-                      <h2>Order Name</h2>
-                    </div>
-                    <div id="disc">
-                      <p>Order Number</p>
-                      <p>Order Date</p>
-                      <button class="readmore_btn">Browse Category</button>
-                      <button class="readmore_btn">Order Status</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-                <div class="row">
-                <div id="mainContainer">
-                  <div class="aside">
-                    <div class="cardview">
-                      <div class="logo">
-                        <img class="order-image"
-                          src="images/products/ListerineMouthwash.png"
-                          alt="profile-sample2"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div id="card-content">
-                    <div id="header">
-                      <h2>Order Name</h2>
-                    </div>
-                    <div id="disc">
-                      <p>Order Number</p>
-                      <p>Order Date</p>
-                      <button class="readmore_btn">Browse Category</button>
-                      <button class="readmore_btn">Order Status</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-                <div class="row">
-                <div id="mainContainer">
-                  <div class="aside">
-                    <div class="cardview">
-                      <div class="logo">
-                        <img class="order-image" src="images/products/nivea.png" alt="profile-sample2" />
-                      </div>
-                    </div>
-                  </div>
-                  <div id="card-content">
-                    <div id="header">
-                      <h2>Order Name</h2>
-                    </div>
-                    <div id="disc">
-                      <p>Order Number</p>
-                      <p>Order Date</p>
-                      <button class="readmore_btn">Browse Category</button>
-                      <button class="readmore_btn">Order Status</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

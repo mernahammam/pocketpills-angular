@@ -8,117 +8,101 @@
                 <h2 class="tm-block-title d-inline-block">Add Employer</h2>
                 </div>
             </div>
-          </div>
-          
-          <div class="row tm-edit-product-row">
-                <div class="col-xl-6 col-lg-6 col-md-12">
-                 <form [formGroup]="addEmployerReactiveForm" (ngSubmit)="handleReactiveFormSubmit()" class="tm-edit-product-form">
-                    <div class="form-group mb-3">
-                    <label
-                        for="staffName"
-                        >Employer Name
-                    </label>
-                    <input
-                        id="name"
-                        name="staffName"
-                        type="text"
-                        class="form-control validate"
-                        formControlName="staffName"
-                        required
-                    />
-                    <div
-                    class="alert alert-danger"
-                    *ngIf="registerFormControl.staffName.touched && !registerFormControl.staffName.valid"
-                    >
-                        <div *ngIf="registerFormControl.staffName.errors.required" style="color: red;">Employer Name is required.</div>     
-                    </div>
-                    </div>
-                    <div class="form-group mb-3">
-                    <label
-                        for="name"
-                        >Employer Email
-                    </label>
-                    <input
-                        id="price"
-                        name="email"
-                        type="text"
-                        class="form-control validate"
-                        formControlName="staffEmail"
-                        required
-                    />
-                    <div
-                    class="alert alert-danger"
-                    *ngIf="registerFormControl.staffEmail.touched && !registerFormControl.staffEmail.valid"
-                    >
-                        <div *ngIf="registerFormControl.staffEmail.errors.required" style="color: red;">Email is required.</div>
-                        <div *ngIf="registerFormControl.staffEmail.errors" style="color: red;">Email must match pattern: xxx@xxx.com</div>
-                    </div>
-                    </div>
-                    <div class="form-group mb-3">
-                    <label
-                        for="salary"
-                        >Salary
-                    </label>
-                    <input
-                        id="salary"
-                        name="salary"
-                        type="number"
-                        class="form-control validate"
-                        formControlName="salary"
-
-                        required
-                    />
-                    </div>
-                    <div class="form-group mb-3">
-                    <label
-                        for="Pnumber"
-                        >hiring date
-                    </label>
-                    <input
-                        id="Pnumber"
-                        name="hiring"
-                        type="date"
-                        class="form-control validate"
-                        formControlName="hiring"
-                        required
-                    />
-                    </div>
-                    <div class="form-group mb-3">
+            
+            <div class="row tm-edit-product-row">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                    <form action="" class="tm-edit-product-form">
+                        <div class="form-group mb-3">
                         <label
-                            for="phonenumber"
-                            >phone number
+                            for="name"
+                            >Employer Name
                         </label>
                         <input
-                            id="Pnumber"
-                            name="phonenumber"
-                            type="number"
+                            id="name"
+                            name="name"
+                            type="text"
                             class="form-control validate"
-                            formControlName="phonenumber"
                             required
                         />
                         </div>
-                    <div class="form-group mb-3">
-                    <label
-                        for="Department"
-                        >Department</label
-                    >
-                    <select
-                        class="custom-select tm-select-accounts"
-                        id="Department"
-                        class="form-control validate"
-                        formControlName="staffDepartment"
-                    >
-                    <option *ngFor="let category of categorys | category: 'categoryName'" value="{{category.categoryName}}"> {{category.categoryName}}</option>
-                    </select>
-                
+                        <div class="form-group mb-3">
+                        <label
+                            for="name"
+                            >Employer Email
+                        </label>
+                        <input
+                            id="price"
+                            name="price"
+                            type="text"
+                            class="form-control validate"
+                            required
+                        />
+                        </div>
+                        <div class="form-group mb-3">
+                        <label
+                            for="salary"
+                            >Salary
+                        </label>
+                        <input
+                            id="salary"
+                            name="salary"
+                            type="number"
+                            class="form-control validate"
+                            required
+                        />
+                        </div>
+                        <div class="form-group mb-3">
+                        <label
+                            for="Pnumber"
+                            >Phone Number
+                        </label>
+                        <input
+                            id="Pnumber"
+                            name="Pnumber"
+                            type="number"
+                            class="form-control validate"
+                            required
+                        />
+                        </div>
+                        <div class="form-group mb-3">
+                        <label
+                            for="Department"
+                            >Department</label
+                        >
+                        <select
+                            class="custom-select tm-select-accounts"
+                            id="Department"
+                        >
+                            <option selected>Select Department</option>
+                            <option value="1">Cosmetics</option>
+                            <option value="2">Skin Care</option>
+                            <option value="3">Marketing</option>
+                        </select>
+                        </div>
+                    </form>
+                </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                    <div class="tm-product-img-dummy mx-auto">
+                        <i
+                        class="fas fa-cloud-upload-alt tm-upload-icon"
+                        onclick="document.getElementById('fileInput').click();"
+                        ></i>
+                    </div>
+                    <div class="custom-file mt-3 mb-3">
+                        <input id="fileInput" type="file" style="display:none;" />
+                        <input
+                        type="button"
+                        class="btn btn-primary btn-block mx-auto"
+                        value="UPLOAD Employer IMAGE"
+                        onclick="document.getElementById('fileInput').click();"
+                        />
+                    </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Employer</button>
-
+                    <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Employer</button>
                     </div>
             
             </div>
-
         </div>
         </div>
     </div>
