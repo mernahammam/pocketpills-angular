@@ -16,10 +16,15 @@ import {AddProductComponent} from './components/admin-components/add-product/add
 import {AddCatagoryComponent} from './components/admin-components/add-catagory/add-catagory.component';
 import {ProfileComponent} from './components/admin-components/profile/profile.component';
 import {DashboardComponent} from './components/admin-components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent},
+  { path: 'home', component: HomepageComponent},
   { path: 'about', component: AboutUsComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
   { path: 'contact', component: ContactUsComponent},
   { path: 'pharmacies', component: PharmaciesComponent},
   { path: 'categories', component: CategoriesComponent},
